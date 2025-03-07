@@ -9,16 +9,23 @@ Este proyecto implementa una API REST básica utilizando Django y Django REST Fr
 - Soporte para operaciones CRUD
 - Esquema de la API disponible
 
+## Documentación de la API
+
+La documentación de la API está disponible en:
+
+- `/docs/`: Documentación interactiva generada por coreapi
+- `/api/schema/`: Esquema de la API en formato OpenAPI
+
 ## Capturas de pantalla
 
 ### Vista de la API en el navegador
-![Vista de la API en el navegador](screenshots/api_view.png)
+![Vista de la API en el navegador](screenshots/api1.png)
 
 ### Documentación de la API
-![Documentación de la API](screenshots/api_docs.png)
+![Documentación de la API](screenshots/api_doc.png)
 
 ### Panel de administración
-![Panel de administración](screenshots/admin_panel.png)
+![Panel de administración](screenshots/admin1.png)
 
 ## Estructura del Proyecto
 
@@ -92,39 +99,3 @@ El proyecto incluye un modelo `User` con los siguientes campos:
    ```
    python manage.py runserver
    ```
-
-## Uso de la API
-
-### Endpoints disponibles
-
-- `GET /api/v1/users/`: Listar todos los usuarios
-- `POST /api/v1/users/`: Crear un nuevo usuario
-- `GET /api/v1/users/{id}/`: Obtener un usuario específico
-- `PUT /api/v1/users/{id}/`: Actualizar un usuario existente
-- `PATCH /api/v1/users/{id}/`: Actualizar parcialmente un usuario
-- `DELETE /api/v1/users/{id}/`: Eliminar un usuario
-
-### Ejemplo de creación de usuario
-
-```bash
-curl -X POST http://localhost:8000/api/v1/users/ \
-    -H "Content-Type: application/json" \
-    -d '{
-        "name": "Juan",
-        "last_name": "Pérez",
-        "age": 30,
-        "city": "Madrid",
-        "is_student": false
-    }'
-```
-
-### Ejemplo de respuesta
-
-![Ejemplo de respuesta de la API](screenshots/api_response.png)
-
-### Documentación de la API
-
-La documentación de la API está disponible en:
-
-- `/docs/`: Documentación interactiva generada por coreapi
-- `/api/schema/`: Esquema de la API en formato OpenAPI
